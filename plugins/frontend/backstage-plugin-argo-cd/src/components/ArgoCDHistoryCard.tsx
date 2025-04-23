@@ -45,10 +45,7 @@ const isHelmChart = (row: any): boolean => {
 };
 
 const getRevisionId = (row: any): string => {
-  if (row.revision.hasOwnProperty('revisionID')) {
-    return row.revision.revisionID;
-  }
-  return row.revision;
+  return row.revisions[0];
 };
 
 const withRevisionDetails = async (
